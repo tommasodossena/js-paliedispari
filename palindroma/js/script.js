@@ -5,12 +5,12 @@ Creare una funzione per capire se la parola inserita è palindroma
 */
 
 // 1 - Funzione per capire se la parola inserita è palindroma
-function palindroma(str) {
-
-    var strRev;
+function palindrome(str) {
+    
+    var strRev = "";
     for ( var i = str.length - 1; i >= 0; i-- ) { 
         strRev += str[i];
-        if ( strRev === str ) {
+        if ( strRev == str ) {
             return true;
         }
     }
@@ -24,10 +24,8 @@ do {
     parola = prompt("Inserisci una parola");
 } while ( !isNaN(parola) || parola == "" );
 
-parola = parola.toLowerCase;
-
-// 3 - Richiamare la funzione
-if ( palindroma(parola) ) {
+// 3 - Richiamare la funzione e stampare il risultato
+if ( palindrome(parola) ) {
     console.log("La parola è palindroma");
 } else {
     console.log("La parola non è palindroma");
