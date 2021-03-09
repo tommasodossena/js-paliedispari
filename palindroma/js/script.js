@@ -7,14 +7,15 @@ Creare una funzione per capire se la parola inserita è palindroma
 // 1 - Funzione per capire se la parola inserita è palindroma
 function palindrome(str) {
     
-    var strRev = "";
+    var strReverse = "";
     for ( var i = str.length - 1; i >= 0; i-- ) { 
-        strRev += str[i];
-        if ( strRev == str ) {
-            return true;
-        }
+        strReverse += str[i];
+    }
+    if ( strReverse == str ) {
+        return true;
     }
     return false;
+    
 }
 
 // 2 - Chiedere all’utente di inserire una parola (+ piccola validazione)
@@ -26,7 +27,7 @@ do {
 
 // 3 - Richiamare la funzione e stampare il risultato
 if ( palindrome(parola) ) {
-    console.log("La parola è palindroma");
+    alert("La parola è palindroma");
 } else {
-    console.log("La parola non è palindroma");
+    alert("La parola non è palindroma");
 }
