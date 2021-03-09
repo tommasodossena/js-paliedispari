@@ -22,11 +22,11 @@ function evenOdd(num1, num2) {
 }
 
 // 1 - Chiedere all'utente di scegliere tra pari o dispari
-var scelta = prompt("Pari o dispari");
 
-while ( scelta != "pari" && scelta != "dispari" ) {
-    scelta = prompt("Scrivi \"pari\" per scegliere pari o scrivi \"dispari\" per scegliere dispari");
-}
+do {
+    var scelta = prompt("Pari o dispari");
+    scelta = scelta.toLowerCase();
+} while ( scelta != "pari" && scelta != "dispari" );
 
 console.log("L'utente ha scelto " + scelta);
 
